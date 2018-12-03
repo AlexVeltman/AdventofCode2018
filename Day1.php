@@ -10,16 +10,16 @@ foreach ($numbers as $num) {
 }
 
 echo 'Solution 1 = '. $value .PHP_EOL;
-
+$value = 0;
 while(1 == 1){
-    $doup[0] = ''; 
+    $doup[$value] = ''; 
     foreach($numbers as $num){
         $value += $num;
-        $doup[$value] = '';
         if(isset($doup[$value])){
             echo 'Solution 2 = '.$value . PHP_EOL;
             break 2;
         }
+        $doup[$value] = '';
     }
 }
 
